@@ -7,7 +7,8 @@
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "upload": "rm -rf ./dist/* && git pull && node build/build.js && rsync -av --delete ./dist root@103.74.193.136:/home/www"
   },
   "dependencies": {
     "vue": "^2.5.2",
