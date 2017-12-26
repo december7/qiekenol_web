@@ -1,6 +1,7 @@
 <template>
   <div>
-    <h1>I am LiBin</h1>
+    <h1>{{message}}</h1>
+    <button @click="handleClick">button</button>
   </div>
 </template>
 
@@ -8,6 +9,12 @@
 export default {
   data () {
     return {
+      message: 'I am LiBin'
+    }
+  },
+  methods: {
+    handleClick() {
+      alert("你点了我一下");
     }
   }
 }
